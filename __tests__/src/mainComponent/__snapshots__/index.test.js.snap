@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App Test renders correctly 1`] = `
+exports[`MainComponent Randering Possible. 1`] = `
 <View
   style={
     Object {
