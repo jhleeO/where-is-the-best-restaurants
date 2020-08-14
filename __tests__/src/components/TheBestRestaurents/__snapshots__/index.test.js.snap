@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TheBestRestaurents Randering Possible. 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "yellow",
+      "height": 1084,
+      "marginTop": 50,
+      "width": 750,
+    }
+  }
+/>
+`;

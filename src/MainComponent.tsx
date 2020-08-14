@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, Alert} from 'react-native';
 import SearchBar from './Components/SearchBar';
+import TheBestRestaurents from './Components/TheBestRestaurents'
 
 class MainComponent extends React.Component {
 
@@ -42,11 +43,11 @@ class MainComponent extends React.Component {
       <View 
         style = {{
           flex: 1,
-          // backgroundColor: 'violet',
           alignItems: 'center',
       }}
       >
         <SearchBar onPressSearch={this.requestTheBestRestaurants}/>
+        <TheBestRestaurents data = {this.state.theBestRestaurants} />
       </View>
     )
   }
