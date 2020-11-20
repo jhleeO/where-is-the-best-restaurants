@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, View, Dimensions, Text} from 'react-native';
-import MapView, { PROVIDER_GOOGLE }  from 'react-native-maps';
+import MapView, { PROVIDER_GOOGLE, Marker }  from 'react-native-maps';
 
 class TheBestRestaurents extends React.Component {
   constructor(props) {
@@ -22,7 +22,24 @@ class TheBestRestaurents extends React.Component {
               }}
 
               style = {styles.mapStyle}
-            />
+            >
+              {
+                this.props.data.map((restaurent, index) => {
+                  const coordinate = {
+                    latitude: restaurent.REFINE_WGS84_LAT,
+                    longitude: restaurent.REFINE_WGS84_LOGT,
+                  };
+
+                  return (
+                    <Marker
+                      key={index}
+                      coordinate={coordinate}
+                    />
+                  );
+                })
+              }
+
+            </MapView>
           </View>
 
           <View style = {{
